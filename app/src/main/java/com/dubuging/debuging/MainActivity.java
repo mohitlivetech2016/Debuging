@@ -1,13 +1,17 @@
 package com.dubuging.debuging;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
-public class MainActivity extends Activity {
+public class MainActivity extends AppCompatActivity {
 
+    private Button mBtnCallSecondActivity;
     private static final String TAG = MainActivity.class.getSimpleName();
     /** Called when the activity is first created. */
 
@@ -15,6 +19,18 @@ public class MainActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Log.d(TAG, "onResume: ............................................................");
+        mBtnCallSecondActivity=(Button)findViewById(R.id.id_btn_CallSecondActivity);
+
+        mBtnCallSecondActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(MainActivity.this,Main2Activity.class);
+                startActivity(intent);
+            }
+        });
+
         Toast.makeText(MainActivity.this,"ON CREATE", Toast.LENGTH_SHORT).show();
     }
 
@@ -22,6 +38,7 @@ public class MainActivity extends Activity {
     protected void onStart() {
         // TODO Auto-generated method stub
         super.onStart();
+        Log.d(TAG, "onstart: ............................................................");
         Toast.makeText(MainActivity.this,"ON START", Toast.LENGTH_SHORT).show();
     }
 
