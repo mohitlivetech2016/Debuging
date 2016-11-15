@@ -11,6 +11,14 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    public Button getmBtnCallSecondActivity() {
+        return mBtnCallSecondActivity;
+    }
+
+    public void setmBtnCallSecondActivity(Button mBtnCallSecondActivity) {
+        this.mBtnCallSecondActivity = mBtnCallSecondActivity;
+    }
+
     private Button mBtnCallSecondActivity;
     private static final String TAG = MainActivity.class.getSimpleName();
     /** Called when the activity is first created. */

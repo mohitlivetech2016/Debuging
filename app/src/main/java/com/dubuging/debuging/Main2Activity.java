@@ -1,5 +1,6 @@
 package com.dubuging.debuging;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -11,42 +12,27 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import fragment.FragmentWithAllActivity;
+
 
 public class Main2Activity extends AppCompatActivity {
 
-    public Button getmBtnCallFirstActivity() {
-        return mBtnCallFirstActivity;
-    }
 
-    public void setmBtnCallFirstActivity(Button mBtnCallFirstActivity) {
-        this.mBtnCallFirstActivity = mBtnCallFirstActivity;
-    }
 
-    private Button mBtnCallFirstActivity;
-    private static final String TAG = MainActivity.class.getSimpleName();
+   // private static final String TAG = MainActivity.class.getSimpleName();
     /** Called when the activity is first created. */
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
-        Log.d(TAG, "Second oncreate: ............................................................");
-        mBtnCallFirstActivity=(Button)findViewById(R.id.id_btn_CallFirstActivity);
+     //   Log.d(TAG, "Second oncreate: ............................................................");
 
-        mBtnCallFirstActivity.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent=new Intent(Main2Activity.this, FragmentWithAllActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        Toast.makeText(Main2Activity.this,"Second ON CREATE", Toast.LENGTH_SHORT).show();
+      //  Toast.makeText(Main2Activity.this,"Second ON CREATE", Toast.LENGTH_SHORT).show();
     }
 
-    @Override
+  /*  @Override
     protected void onStart() {
         // TODO Auto-generated method stub
         super.onStart();
@@ -92,5 +78,5 @@ public class Main2Activity extends AppCompatActivity {
         super.onDestroy();
         Log.d(TAG,"Second On destroy................................");
         Toast.makeText(Main2Activity.this,"Second ON DESTROY", Toast.LENGTH_SHORT).show();
-    }
+    }*/
 }
