@@ -13,18 +13,23 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
     <fragment
+        class="fragment.FirstFragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:name="fragment.SecondFragment"
+
         android:layout_weight="1"
+
         android:id="@+id/id_fragemntFirst"
         />
     <fragment
+
+        class="fragment.SecondFragment"
         android:layout_weight="1"
+
         android:id="@+id/id_fragemntSecond"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:name="fragment.SecondFragment"
+
         />
 </LinearLayout>
 </LinearLayout>
