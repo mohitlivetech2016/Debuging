@@ -1,0 +1,31 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="fragment.FirstFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+   <EditText
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:hint="Enter text to pass data"
+       android:id="@+id/id_Et_FragFirst_PassValue"
+       android:gravity="center"
+       android:layout_gravity="center"
+       />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:text="Sumbit"
+        android:paddingTop="3sp"
+        android:paddingBottom="3sp"
+        android:id="@+id/id_Btn_FragFirst_Submit"
+        />
+
+</LinearLayout>
+</FrameLayout>
