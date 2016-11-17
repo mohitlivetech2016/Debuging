@@ -15,21 +15,21 @@
     <fragment
         class="fragment.FirstFragment"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
 
         android:layout_weight="1"
 
         android:id="@+id/id_fragemntFirst"
-        />
+        tools:layout="@layout/fragment_first" />
     <fragment
 
         class="fragment.SecondFragment"
-        android:layout_weight="1"
+        android:layout_weight="2"
 
         android:id="@+id/id_fragemntSecond"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
 
-        />
+        tools:layout="@layout/fragment_second" />
 </LinearLayout>
 </LinearLayout>

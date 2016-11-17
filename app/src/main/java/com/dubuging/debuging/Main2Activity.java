@@ -2,6 +2,7 @@ package com.dubuging.debuging;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.design.widget.FloatingActionButton;
@@ -14,13 +15,14 @@ import android.widget.Button;
 import android.widget.Toast;
 import android.support.v4.app.FragmentActivity;
 
+import com.dubuging.debuging.listner.OnFragmentInteractionListener;
 
 
-public class Main2Activity extends FragmentActivity  {
+public class Main2Activity extends FragmentActivity implements OnFragmentInteractionListener {
 
 
 
-    private static final String TAG = MainActivity.class.getSimpleName();
+    private static final String TAG = Main2Activity.class.getSimpleName();
     /** Called when the activity is first created. */
 
 
@@ -33,7 +35,10 @@ public class Main2Activity extends FragmentActivity  {
 
         Toast.makeText(Main2Activity.this,"Second ON CREATE", Toast.LENGTH_SHORT).show();
     }
+    @Override
+    public void onFragmentInteraction(Uri uri) {
 
+    }
     @Override
     protected void onStart() {
         // TODO Auto-generated method stub

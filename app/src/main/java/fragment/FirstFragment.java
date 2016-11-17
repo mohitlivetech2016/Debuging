@@ -4,11 +4,16 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
+import com.dubuging.debuging.Main2Activity;
+import com.dubuging.debuging.MainActivity;
 import com.dubuging.debuging.R;
+import com.dubuging.debuging.listner.OnFragmentInteractionListener;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -29,7 +34,7 @@ public class FirstFragment extends Fragment {
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
-
+    private static final String TAG = FirstFragment.class.getSimpleName();
     public FirstFragment() {
 
 
@@ -51,6 +56,8 @@ public class FirstFragment extends Fragment {
     public static FirstFragment newInstance(String param1, String param2) {
         FirstFragment fragment = new FirstFragment();
         Bundle args = new Bundle();
+        Log.d(TAG, "First Fragment New instance: ............................................................");
+
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
@@ -60,6 +67,7 @@ public class FirstFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.d(TAG, "First Fragment oncreate: ............................................................");
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
@@ -70,11 +78,13 @@ public class FirstFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        Log.d(TAG, "First Fragment oncreateView: ............................................................");
         return inflater.inflate(R.layout.fragment_first, container, false);
     }
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
+        Log.d(TAG, "First Fragmet OnButton Press: ............................................................");
         if (mListener != null) {
             mListener.onFragmentInteraction(uri);
         }
@@ -83,6 +93,7 @@ public class FirstFragment extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
+        Log.d(TAG, "First Fragment Onattach ............................................................");
         if (context instanceof OnFragmentInteractionListener) {
             mListener = (OnFragmentInteractionListener) context;
         } else {
@@ -95,6 +106,7 @@ public class FirstFragment extends Fragment {
     public void onDetach() {
         super.onDetach();
         mListener = null;
+        Log.d(TAG, "First Fragment onDeatch: ............................................................");
     }
 
   /*  *//**//**
@@ -107,8 +119,8 @@ public class FirstFragment extends Fragment {
      * "http://developer.android.com/training/basics/fragments/communicating.html"
      * >Communicating with Other Fragments</a> for more information.
      *//**//**/
-    public interface OnFragmentInteractionListener {
+  /*  public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
-    }
+    }*/
 }
