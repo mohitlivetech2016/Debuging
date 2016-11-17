@@ -3,6 +3,7 @@ package com.dubuging.debuging;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -11,14 +12,15 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+import android.support.v4.app.FragmentActivity;
 
 
 
-public class Main2Activity extends AppCompatActivity {
+public class Main2Activity extends FragmentActivity  {
 
 
 
-   // private static final String TAG = MainActivity.class.getSimpleName();
+    private static final String TAG = MainActivity.class.getSimpleName();
     /** Called when the activity is first created. */
 
 
@@ -27,12 +29,12 @@ public class Main2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
-     //   Log.d(TAG, "Second oncreate: ............................................................");
+        Log.d(TAG, "Second oncreate: ............................................................");
 
-      //  Toast.makeText(Main2Activity.this,"Second ON CREATE", Toast.LENGTH_SHORT).show();
+        Toast.makeText(Main2Activity.this,"Second ON CREATE", Toast.LENGTH_SHORT).show();
     }
 
-  /*  @Override
+    @Override
     protected void onStart() {
         // TODO Auto-generated method stub
         super.onStart();
@@ -78,5 +80,5 @@ public class Main2Activity extends AppCompatActivity {
         super.onDestroy();
         Log.d(TAG,"Second On destroy................................");
         Toast.makeText(Main2Activity.this,"Second ON DESTROY", Toast.LENGTH_SHORT).show();
-    }*/
+    }
 }
